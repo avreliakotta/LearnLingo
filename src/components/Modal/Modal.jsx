@@ -12,7 +12,7 @@ const Modal=({children, close})=>{
       useEffect(()=>{
         document.addEventListener('keydown', closeModal);
         return () => document.removeEventListener('keydown', closeModal);
-      },[])
+      })
     return(
         createPortal(
         <div className={css.backdrop} onClick={closeModal}>
