@@ -1,0 +1,44 @@
+.logoWrap{
+    display: flex;
+    gap:0.2rem;
+    align-items: center;
+}
+.logoIcon{ 
+    width:2.8rem;
+    height:2.8rem;
+}
+.logoText{
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 2rem;
+line-height: 1.2;
+letter-spacing: -0.02em;
+color: var(--main-color);
+}
+.navList{
+    display: flex;
+    gap:2.8rem;
+}
+.headerSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top:2rem;
+    padding-bottom:2rem;
+}
+.link{
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 1.6rem;
+line-height: 1.25;
+color:var(--main-color);
+}
+.link:global(.active){
+    color:var(--decorate-color);
+    border-bottom:0.2rem solid var(--decorate-color);
+}
+@media screen and (max-width: 767px){
+    .navList{
+        display: none;
+    }
+}
