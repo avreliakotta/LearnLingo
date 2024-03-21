@@ -1,0 +1,30 @@
+.topBlock{
+    display: flex;
+    gap:3.2rem;
+}
+.cardWrap{
+    display: flex;
+    align-items: first baseline;
+    gap:4.8rem;
+}
+.avatarImg{
+    width:9.6rem;
+    height:9.6rem;
+    border-radius: 50%;
+    
+}
+.iconWrap{
+    display: flex;
+    gap:0.4rem;
+    
+}
+.bookOpenIcon{
+    width:1.6rem;
+    height: 1.6rem;
+}
+.imgWrapper{
+border: 3px solid #fbe9ba;
+border-radius: 100px;
+width: 120px;
+height: 120px;
+}

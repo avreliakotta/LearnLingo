@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, get } from "firebase/database";
+
 
 // import { getAnalytics } from "firebase/analytics";
 
@@ -25,17 +25,5 @@ const firebaseConfig = {
   
   // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// const database = getDatabase(app);
 
-// // // Получение данных из базы данных
-// const dbRef = ref(database);
-// get(dbRef).then((snapshot) => {
-//   if (snapshot.exists()) {
-//     console.log(snapshot.val());
-//   } else {
-//     console.log("No data available");
-//   }
-// }).catch((error) => {
-//   console.error("Error reading data:", error);
-// });
 export default app;
