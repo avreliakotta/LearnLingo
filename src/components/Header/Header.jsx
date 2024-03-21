@@ -17,7 +17,7 @@ const Header = ()=>{
                 <ul className={css.navList}>
                     <li><NavLink to="/" className={css.link}>Home</NavLink></li>
                     <li><NavLink to="/teachers" className={css.link}>Teachers</NavLink></li>
-                    
+                    <li><NavLink to="/favorites" className={css.link}>Favorites</NavLink></li>
                 </ul>
                 </nav>
             < AuthNav/>
