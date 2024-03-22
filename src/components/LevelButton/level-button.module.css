@@ -1,0 +1,15 @@
+.levelBtn{
+border: 1px solid rgba(18, 20, 23, 0.2);
+border-radius: 3.5rem;
+padding: 0.8rem 1.2rem;
+   
+background-color: transparent;
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 1.4rem;
+line-height: 1.14;
+color: var(--main-color);
+}
+.levelBtn:is(:hover,:focus){
+    background-color: var(--decorate-color);
+}

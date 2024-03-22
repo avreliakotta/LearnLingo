@@ -1,7 +1,7 @@
 import css from "./container.module.css";
-const Container=({children})=>{
+const Container=({children,backgroundColor})=>{
     return(
-        <div className={css.container}>
+        <div className={css.container} style={{ backgroundColor }}>
             {children}
         </div>
     )

@@ -8,6 +8,8 @@
   --backdrop-color:rgba(18, 20, 23, 0.5);
   --success-color: #3cbf61;
   --error-color: #d80027;
+  --addition-color:#8a8a89;
+  --rare-color:#38cd3e;
   --font-family: "Roboto", sans-serif;
   --transition-duration: 250ms;
   --transition-time-function: cubic-bezier(0.4, 0, 0.2, 1);
