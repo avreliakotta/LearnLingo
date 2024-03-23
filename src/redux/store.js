@@ -14,6 +14,7 @@ import {teachersReducer} from "./teachers/teachers-slice";
 const persisTeacherstConfig = {
   key: 'teachers',
   storage,
+  whitelist: ['favorites', 'page'],
 }
 const persistedTeachersReducer=persistReducer(persisTeacherstConfig,teachersReducer)
  export const store = configureStore({

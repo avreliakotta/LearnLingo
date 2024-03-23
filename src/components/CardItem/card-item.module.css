@@ -1,161 +1,169 @@
-.topBlock{
-    width:60.7rem;
-    height:2.6rem;
-    display: flex;
-    gap:3.2rem;
-    
+.topBlock {
+  width: 60.7rem;
+  height: 2.6rem;
+  display: flex;
+  gap: 3.2rem;
 }
-.cardWrap{
-    display: flex;
-    gap:4.8rem;
-    width:118.4rem;
-    padding: 2.4rem;
-    border-radius: 2.4rem;
-    margin-left: auto;
-    margin-right: auto;
-    background-color:var(--invent-color);
+.cardWrap {
+  display: flex;
+  gap: 4.8rem;
+  width: 118.4rem;
+  padding: 2.4rem;
+  border-radius: 2.4rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--invent-color);
 }
-.avatarImg{
-    width:9.6rem;
-    height:9.rem; 
-    border-radius: 10rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    }
-    .imgWrapper{
-        border: 3px solid var(--accent-color);
-        border-radius: 10rem;
-        width: 12rem;
-        height: 12rem; 
-        position: relative;
-        overflow: hidden;
-        position: relative;
-        
-        }
-.iconWrap{
-    display: flex;
-    gap:0.4rem;
-    color:var(--main-color);
-    align-items: center;
+.imgWrapper {
+  border: 3px solid var(--accent-color);
+  border-radius: 10rem;
+  width: 12rem;
+  height: 12rem;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
 }
-.bookOpenIcon{
-    width:1.6rem;
-    height: 1.6rem;
-    stroke:currentColor;
-    fill:transparent;
-    
-}
-.starIcon{
-    width:1.6rem;
-    height: 1.6rem; 
-}
-
-.iconHeartBtn{
-    background-color: transparent;
-    width:2.6rem;
-    height:2.6rem;
-    padding:0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border:none;
-
+.avatarImg {
+  width: 9.6rem;
+  height: 9.6;
+  border-radius: 10rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow:hidden;
   
+ 
 }
-.heartIcon{
-    width:2.6rem;
-    height:2.6rem;
-    fill:transparent;
-    stroke:var(--main-color);
+.circle {
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 0.2rem solid var(--invent-color);
+  border-radius: 10rem;
+  background-color: var(--rare-color);
+  position: absolute;
+  top: 12%;
+  left: 70%;
+  overflow: hidden;
 }
- .favorite{
-    /* width:2.6rem;
-    height:2.6rem; */
-    fill:var(--decorate-color);;
-    stroke:var(--decorate-color);;
+
+.iconWrap {
+  display: flex;
+  gap: 0.4rem;
+  color: var(--main-color);
+  align-items: center;
 }
-.contentWrap{
-    width:96.8rem;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
+.bookOpenIcon {
+  width: 1.6rem;
+  height: 1.6rem;
+  stroke: currentColor;
+  fill: transparent;
 }
-.text{
-font-family: var(--font-family);
-font-weight: 500;
-font-size: 1.6rem;
-line-height: 1.5;
-color:var(--addition-color);
-margin-bottom: 0.8px;
+.starIcon {
+  width: 1.6rem;
+  height: 1.6rem;
 }
-.topText{
-font-family: var(--font-family);
-font-weight: 500;
-font-size: 1.6rem;
-line-height: 1.5;
-color:var(--main-color);
+
+.iconHeartBtn {
+  background-color: transparent;
+  width: 2.6rem;
+  height: 2.6rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
 }
-.priceText{
-   color:var(--rare-color); 
+.heartIcon {
+  width: 2.6rem;
+  height: 2.6rem;
+  fill: transparent;
+  stroke: var(--main-color);
 }
-.benefitsList{
-    display: flex;
-    flex-direction:column;
-    gap:0.8rem;
-   
+.favorite {
+  fill: var(--decorate-color);
+  stroke: var(--decorate-color);
 }
-.columnWrapper{
-    display: flex;
-    flex-direction:column;
-    gap:3.2rem;
+.contentWrap {
+  width: 96.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.benefitsWrap{
-    display: flex;
-    flex-direction:column;
-    gap:1.6rem; 
+.text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--addition-color);
+  margin-bottom: 0.8px;
 }
-.buttonList{
-    display: flex;
-    gap:0.8rem;
+.topText {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--main-color);
 }
-.wrapper{
-    display: flex;
-    flex-direction: column;
+.priceText {
+  color: var(--rare-color);
 }
-.moreBtn{
-border:none;
-background-color: transparent;
-font-family: var(--font-family);
-font-weight: 500;
-font-size: 1.6rem;
-line-height: 1.5;
-text-decoration: underline;
-text-decoration-skip-ink: none;
-color:var(--main-color);
-display: flex;
-padding:0;
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
-.benefitsText{
-font-family: var(--font-family);
-font-weight: 500;
-font-size: 1.6rem;
-line-height: 1.5;
-color: var(--addition-color);
+.columnWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
 }
-.infoDecorText{
-text-decoration: underline;
-text-decoration-skip-ink: none;
-color: var(--main-color);
+.benefitsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 }
-.infoText{
-    color:var(--main-color); 
+.buttonList {
+  display: flex;
+  gap: 0.8rem;
 }
-.title{
-font-family: var(--font-family);
-font-weight: 500;
-font-size: 2.4rem;
-line-height: 1.0;
-color: var(--main-color);
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.moreBtn {
+  border: none;
+  background-color: transparent;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--main-color);
+  display: flex;
+  padding: 0;
+}
+.benefitsText {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--addition-color);
+}
+.infoDecorText {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--main-color);
+}
+.infoText {
+  color: var(--main-color);
+}
+.title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--main-color);
 }

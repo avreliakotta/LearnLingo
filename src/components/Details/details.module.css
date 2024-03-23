@@ -1,0 +1,48 @@
+.contentWrap{
+    display: flex;
+    flex-direction: column;
+    gap:0.2rem;
+    margin-bottom: 1.6rem;
+}
+.iconWrap{
+    display: flex;
+    gap:0.1rem;
+}
+.experienceText{
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 1.6rem;
+line-height: 1.5;
+color: var(--main-color);
+margin-bottom: 3.2rem;
+}
+.subTitle{
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 1.6rem;
+line-height: 1.5;
+color: var(--addition-color);
+}
+.starIcon{
+    width:1.6rem;
+    height:1.6rem;
+}
+.text{
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 1.4rem;
+line-height: 1.29;
+color: var(--main-color);
+}
+.commentText{
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 1.6rem;
+line-height: 1.5;
+color: var(--main-color);
+}
+.detailsList{
+    display: flex;
+    flex-direction: column;
+    gap:3.2rem;
+}
