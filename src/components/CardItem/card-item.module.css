@@ -62,18 +62,25 @@
     justify-content: center;
     border:none;
 
-}
-.contentWrap{
-    width:96.8rem;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
+  
 }
 .heartIcon{
     width:2.6rem;
     height:2.6rem;
     fill:transparent;
     stroke:var(--main-color);
+}
+ .favorite{
+    /* width:2.6rem;
+    height:2.6rem; */
+    fill:var(--decorate-color);;
+    stroke:var(--decorate-color);;
+}
+.contentWrap{
+    width:96.8rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .text{
 font-family: var(--font-family);

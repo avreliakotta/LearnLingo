@@ -1,16 +1,31 @@
 import css from './card-item.module.css';
-
+import { useDispatch,useSelector } from 'react-redux';
+import {selectFavorites} from "../../redux/teachers/teachers-selectors";
 import sprite from '../../img/symbol-defs.svg';
 import LevelButton from '../LevelButton/LevelButton';
+import  { addToFavorites, removeFromFavorites} from "../../redux/teachers/teachers-slice";
 
 
 const CardItem = ({teacher}) => {
-  const speaks= teacher.languages.join(", ")
+  const dispatch=useDispatch() ;
+  const favorites=useSelector(selectFavorites);
+  console.log("favorites",favorites);
+  const isFavorite=favorites.some(item=>item.id===teacher.id);               
+const{avatar_url,lessons_done,rating,languages,price_per_hour,name,lesson_info,conditions,levels}=teacher;
+  const speaks=languages.join(", ");
+
+  const handleFavoriteToggle = () => {
+    if (isFavorite) {
+      dispatch(removeFromFavorites(teacher));
+    } else {
+      dispatch(addToFavorites(teacher));
+    }
+  };
     
   return (
     <div className={css.cardWrap}>
       <div className={css.imgWrapper}>
-        <img src={teacher.avatar_url} alt="avatar" className={css.avatarImg} />
+        <img src={avatar_url} alt="avatar" className={css.avatarImg} />
       </div>
       <div className={css.wrapper}>
         <div className={css.contentWrap}>
@@ -22,26 +37,26 @@ const CardItem = ({teacher}) => {
               </svg>
               <p className={css.topText}>Lessons online</p>
             </div>
-            <p className={css.topText}>Lessons done: {teacher.lessons_done} </p>
+            <p className={css.topText}>Lessons done: {lessons_done} </p>
             <div className={css.iconWrap}>
               <svg className={css.starIcon}>
                 <use href={`${sprite}#icon-star`}></use>
               </svg>
-              <p className={css.topText}>Rating: {teacher.rating}</p>
+              <p className={css.topText}>Rating: {rating}</p>
             </div>
             <p className={css.topText}>
-              Price / 1 hour: <span className={css.priceText}>{teacher.price_per_hour}$
+              Price / 1 hour: <span className={css.priceText}>{price_per_hour}$
 </span>
             </p>
           </div>
-          <button type="button" className={css.iconHeartBtn}>
-            <svg className={css.heartIcon}>
+          <button type="button" className={css.iconHeartBtn}  onClick={ handleFavoriteToggle}>
+            <svg  className={`${css.heartIcon} ${isFavorite ? css.favorite : ''}`} >
               <use href={`${sprite}#icon-heart1`}></use>
             </svg>
           </button>
         </div>
         <div className={css.columnWrapper}>
-          <h2 className={css.title}>{teacher.name}</h2>
+          <h2 className={css.title}>{name}</h2>
           <div className={css.benefitsWrap}>
             <ul className={css.benefitsList}>
               <li>
@@ -50,13 +65,13 @@ const CardItem = ({teacher}) => {
                 </p>
               </li>
               <li>
-                <p className={css.benefitsText}>Lesson Info: <span className={css.infoText}>{teacher.lesson_info}
+                <p className={css.benefitsText}>Lesson Info: <span className={css.infoText}>{lesson_info}
 
 </span></p>
               </li>
               <li>
                 <p className={css.benefitsText}>
-                  Conditions: <span className={css.infoText}>{teacher.conditions}</span>
+                  Conditions: <span className={css.infoText}>{conditions}</span>
                 </p>
               </li>
             </ul>
@@ -65,18 +80,10 @@ const CardItem = ({teacher}) => {
             </button>
           </div>
           <ul className={css.buttonList}>
-            <li>
-              <LevelButton text="#A1 Beginner" />
-            </li>
-            <li>
-              <LevelButton text="#A2 Elementary" />
-            </li>
-            <li>
-              <LevelButton text="#B1 Intermediate" />
-            </li>
-            <li>
-              <LevelButton text="#B2 Upper-Intermediate" />
-            </li>
+            {levels && levels.map((level)=><li>
+              <LevelButton key={level} text={`#${level}`} />
+            </li>)}
+           
           </ul>
         </div>
       </div>

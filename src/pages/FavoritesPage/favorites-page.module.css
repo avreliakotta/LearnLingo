@@ -1,0 +1,6 @@
+.fivoritesList{
+    display: flex;
+    flex-direction: column;
+    gap:3.2rem;
+    padding-top:3.2rem;
+}
