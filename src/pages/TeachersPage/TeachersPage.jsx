@@ -8,11 +8,13 @@ import Container from "../../components/Container/Container";
 const TeachersPage=()=>{
     const dispatch = useDispatch();
     const data = useSelector(selectTeachers);
+   
     useEffect(() => {
-        
-       dispatch(fetchAll());
+        dispatch(fetchAll());
     
       }, [dispatch]);
+   
+
     return(
         <main>
             <section>

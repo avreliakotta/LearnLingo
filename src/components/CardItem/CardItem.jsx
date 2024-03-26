@@ -13,9 +13,14 @@ const CardItem = ({teacher}) => {
   const [expanded, setExpanded] = useState(false);
   const dispatch=useDispatch() ;
   const favorites=useSelector(selectFavorites);
+  
+  
+  const isFavorite=favorites.some(item=>item.id===teacher.id);
  
-  const isFavorite=favorites.some(item=>item.id===teacher.id);               
+  
+  console.log("isFavorite",isFavorite);              
   const{avatar_url,lessons_done,rating,languages,price_per_hour,name,lesson_info,conditions,levels,id}=teacher;
+ 
   const speaks=languages.join(", ");
 
   const handleReadMoreClick = () => {
@@ -24,8 +29,10 @@ const CardItem = ({teacher}) => {
 
   const handleFavoriteToggle = () => {
     if (isFavorite) {
+      console.log('Состояние favorites перед обновлением:', favorites);
       dispatch(removeFromFavorites(teacher));
     } else {
+      console.log('Состояние favorites перед обновлением:', favorites);
       dispatch(addToFavorites(teacher));
     }
   };
