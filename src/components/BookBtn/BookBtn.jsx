@@ -1,7 +1,7 @@
 import css from "./book-btn.module.css";
-const BookBtn=()=>{
+const BookBtn=({ onClick})=>{
     return(
-        <button type="button" className={css.bookBtn}>Book trial lesson</button>
+        <button type="button" onClick={onClick} className={css.bookBtn}>Book trial lesson</button>
     )
 }
 export default BookBtn;

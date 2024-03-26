@@ -5,7 +5,7 @@ const initialState={
     favorites:[],
     loading:false,
     error:null,
-    page:1
+    
 }
 const teachersSlice = createSlice({
     name:"teachers",
@@ -23,9 +23,7 @@ const teachersSlice = createSlice({
           favorites: state.favorites.filter((favorite) => favorite.id !== payload.id),
         };
       },
-      savePage(state, {payload}) {
-        state.page = payload;
-      }
+      
     },
     extraReducers: builder => {
         builder
@@ -44,5 +42,5 @@ const teachersSlice = createSlice({
   })
 }
 });
-export const { addToFavorites, removeFromFavorites,savePage}= teachersSlice.actions;
+export const { addToFavorites, removeFromFavorites}= teachersSlice.actions;
 export const teachersReducer=teachersSlice.reducer;

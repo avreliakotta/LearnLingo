@@ -7,18 +7,18 @@ import LevelButton from '../LevelButton/LevelButton';
 import  { addToFavorites, removeFromFavorites} from "../../redux/teachers/teachers-slice";
 import Details from "../Details/Details";
 import BookBtn from "../BookBtn/BookBtn";
+import Modal from "../Modal/Modal";
+import FormBooking from "../FormBooking/FormBooking";
 
 
 const CardItem = ({teacher}) => {
   const [expanded, setExpanded] = useState(false);
+  const[showBookModal,setShowBookModal]=useState(false);
   const dispatch=useDispatch() ;
   const favorites=useSelector(selectFavorites);
   
   
   const isFavorite=favorites.some(item=>item.id===teacher.id);
- 
-  
-  console.log("isFavorite",isFavorite);              
   const{avatar_url,lessons_done,rating,languages,price_per_hour,name,lesson_info,conditions,levels,id}=teacher;
  
   const speaks=languages.join(", ");
@@ -26,16 +26,21 @@ const CardItem = ({teacher}) => {
   const handleReadMoreClick = () => {
     setExpanded(!expanded); 
   };
+  
 
   const handleFavoriteToggle = () => {
     if (isFavorite) {
-      console.log('Состояние favorites перед обновлением:', favorites);
+     
       dispatch(removeFromFavorites(teacher));
     } else {
-      console.log('Состояние favorites перед обновлением:', favorites);
+    
       dispatch(addToFavorites(teacher));
     }
   };
+const openBookModal=()=>setShowBookModal(true);
+const closeBookModal= ()=>setShowBookModal(false);
+
+  
     
   return (
     
@@ -103,8 +108,13 @@ const CardItem = ({teacher}) => {
             </li>)}
            
           </ul>
-          {expanded && <BookBtn />}
+          {expanded && <BookBtn  onClick={openBookModal}  />}
+          {expanded && showBookModal &&<Modal close={closeBookModal}>
+            <FormBooking teaherPhoto={avatar_url} name={name}/>
+          </Modal>}
+          
         </div>
+        
        </div>
        
     </div>

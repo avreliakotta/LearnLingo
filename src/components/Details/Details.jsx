@@ -1,8 +1,10 @@
-import css from './details.module.css';
+import { useState } from "react";import css from './details.module.css';
 import sprite from '../../img/symbol-defs.svg';
+
 const Details = ({teacher}) => {
 
   const { experience, reviews } = teacher;
+
   return (
     <div>
       <p className={css.experienceText}>{experience}</p>
