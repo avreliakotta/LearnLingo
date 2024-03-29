@@ -79,33 +79,34 @@ transition: background-color var(--transition-duration) var(--transition-time-fu
 .heroBtn:is(:hover,:focus){
     background-color: var(--accent-color);
 }
+
 @media screen and (max-width: 1024px){
     .contentWrapper{
         padding:4rem 2rem 4rem 2rem;
         height: auto;
-        /* text-align: center; */
     } 
-    .heroWrapper {
+}
+    /* .heroWrapper {
         display:flex;
         /* flex-direction: column; */
-        gap:1.8rem;
+        /* gap:1.8rem; */
         /* justify-content: center; */
-    } 
+     
    
-    .heroImg{
+    /* .heroImg{
         display: block;
         border-radius: 3.5rem;
         max-width:72rem;
         
         
-    }
-          
-}
-  @media screen and (max-width: 767px) {
-    .contentWrapper{
+    } */
+    
+
+  /* @media screen and (max-width: 767px) {
+     .contentWrapper{
         text-align: start;
-    }
-    .heroWrapper {
+    } 
+     .heroWrapper {
         flex-direction: column;
         gap:1.8rem;
         justify-content: center;
@@ -116,5 +117,5 @@ transition: background-color var(--transition-duration) var(--transition-time-fu
         max-width:72rem;
         height:53rem;
         width:100%;
-    }
-  }
+    } 
+  } */
