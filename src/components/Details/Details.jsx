@@ -1,8 +1,7 @@
-import { useState } from "react";import css from './details.module.css';
+import css from './details.module.css';
 import sprite from '../../img/symbol-defs.svg';
 
-const Details = ({teacher}) => {
-
+const Details = ({ teacher }) => {
   const { experience, reviews } = teacher;
 
   return (

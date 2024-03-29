@@ -1,11 +1,11 @@
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+// import { Formik, Form, Field, ErrorMessage } from 'formik';
 import css from './form-booking.module.css';
 const FormBooking = ({ teaherPhoto, name }) => {
-    const initialValues = {
-        email: '',
-        password: '',
-        phone:""
-      };
+    // const initialValues = {
+    //     email: '',
+    //     password: '',
+    //     phone:""
+    //   };
   return (
    
     <>
