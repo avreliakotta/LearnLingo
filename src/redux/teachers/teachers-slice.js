@@ -31,9 +31,9 @@ const teachersSlice = createSlice({
             state.loading = true;
             state.error = null;
           })
-          .addCase(fetchAll.fulfilled, (state,action) => {
+          .addCase(fetchAll.fulfilled, (state,{payload}) => {
             state.loading = false;
-            state.items= action.payload;
+            state.items=payload;
             state.error = null;
 })
 .addCase(fetchAll.rejected, (state, { payload }) => {

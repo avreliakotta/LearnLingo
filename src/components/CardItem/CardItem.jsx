@@ -19,9 +19,9 @@ const CardItem = ({teacher}) => {
   
   
   const isFavorite=favorites.some(item=>item.id===teacher.id);
-  const{avatar_url,lessons_done,rating,languages,price_per_hour,name,lesson_info,conditions,levels,id}=teacher;
+  const{avatar_url,lessons_done,rating,languages,price_per_hour,name,lesson_info,conditions,levels}=teacher;
  
-  const speaks=languages.join(", ");
+  const speaks = languages ? languages.join(", ") : "";
 
   const handleReadMoreClick = () => {
     setExpanded(!expanded); 
@@ -44,7 +44,7 @@ const closeBookModal= ()=>setShowBookModal(false);
     
   return (
     
-    <div className={css.cardWrap} key={id}>
+    <li className={css.cardWrap}>
       <div className={css.imgWrapper}>
         <img src={avatar_url} alt="avatar" className={css.avatarImg} />
         <div className={css.circle}></div>
@@ -117,8 +117,8 @@ const closeBookModal= ()=>setShowBookModal(false);
         
        </div>
        
-    </div>
+    </li>
     
   );
-};
+}
 export default CardItem;

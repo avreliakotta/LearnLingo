@@ -73,6 +73,9 @@ color:var(--main-color);
 transition: background-color var(--transition-duration) var(--transition-time-function) ;
 
 }
+.imgThumb{
+    flex-shrink:0;
+}
 .heroBtn:is(:hover,:focus){
     background-color: var(--accent-color);
 }

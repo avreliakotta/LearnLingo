@@ -1,19 +1,14 @@
-
-import css from "./card-list.module.css";
-import CardItem from "../CardItem/CardItem";
+import css from './card-list.module.css';
+import CardItem from '../CardItem/CardItem';
 
 const CardList = ({ data }) => {
-   
-  
-    return (
-      <ul className={css.cardList}>
-        {data.map((teacher) => (
-          <li key={teacher.id}>
-            <CardItem teacher={teacher} />
-          </li>
-        ))}
-      </ul>
-    );
-  };
-  
+  return (
+    <ul className={css.cardList}>
+      {data.map(teacher => (
+        <CardItem teacher={teacher} key={teacher.id} />
+      ))}
+    </ul>
+  );
+};
+
 export default CardList;
