@@ -13,6 +13,7 @@ reducers:{
 logoutUser(state){
   state.user=null;
   state.isAuth = false;
+  state.error = null;
 }
 },
   extraReducers: builder => {
@@ -24,7 +25,8 @@ logoutUser(state){
       .addCase(register.fulfilled, (state, { payload }) => {
         state.loading = false;
         state.user = payload;
-        state.isAuth = true;
+       
+        
       })
       .addCase(register.rejected, (state, { payload }) => {
         state.loading = false;
