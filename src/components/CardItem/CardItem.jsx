@@ -9,6 +9,8 @@ import Details from "../Details/Details";
 import BookBtn from "../BookBtn/BookBtn";
 import Modal from "../Modal/Modal";
 import FormBooking from "../FormBooking/FormBooking";
+import {useAuth} from "../../hooks/useAuth";
+import toast from 'react-hot-toast';
 
 
 const CardItem = ({teacher}) => {
@@ -16,7 +18,7 @@ const CardItem = ({teacher}) => {
   const[showBookModal,setShowBookModal]=useState(false);
   const dispatch=useDispatch() ;
   const favorites=useSelector(selectFavorites);
-  
+  const{isAuth}=useAuth();
   
   const isFavorite=favorites.some(item=>item.id===teacher.id);
   const{avatar_url,lessons_done,rating,languages,price_per_hour,name,lesson_info,conditions,levels}=teacher;
@@ -29,7 +31,11 @@ const CardItem = ({teacher}) => {
   
 
   const handleFavoriteToggle = () => {
-    if (isFavorite) {
+    if(!isAuth){
+      toast.success('This action is available only for authenticated users.', { position: 'top-center' });
+      return;
+    }
+    if (isAuth && isFavorite) {
      
       dispatch(removeFromFavorites(teacher));
     } else {

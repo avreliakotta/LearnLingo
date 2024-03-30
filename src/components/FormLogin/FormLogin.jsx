@@ -1,13 +1,40 @@
 import css from "./form-login.module.css";
+import { useDispatch } from 'react-redux';
 import sprite from "../../img/symbol-defs.svg";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { logInSchema } from "../../shemas/auth-shemas";
-
-const FormLogin=()=>{
+import {login} from "../../redux/auth/auth-operations";
+import toast from 'react-hot-toast';
+const FormLogin=({closeModal})=>{
+  const dispatch=useDispatch();
     const initialValues = {
-        email: '',
-        password: '',
+        email: "",
+        password:"",
+        
       };
+      const handleSubmit = async (
+        values,
+        { setSubmitting, resetForm, setError }
+      ) => {
+        
+        try{
+          await dispatch(login(values));
+        
+        setTimeout(() => {
+          toast.success('Login successful!', { position: 'top-center' });
+         
+          setSubmitting(false);
+          resetForm();
+          closeModal();
+        }, 1000); 
+        
+        } catch (error) {
+          toast.error('Login failed. Please, try again.', {
+            position: 'top-center'})
+          
+          }
+          setSubmitting(false);
+        }
     return(
         <>
         <h1 className={css.title}>Log In</h1>
@@ -15,6 +42,7 @@ const FormLogin=()=>{
         <Formik 
          initialValues={initialValues}
          validationSchema={logInSchema}
+         onSubmit={handleSubmit}
         >
              {({ errors, touched }) => (
             <Form className={css.loginForm}>

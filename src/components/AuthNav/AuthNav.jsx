@@ -25,7 +25,7 @@ const AuthNav=()=>{
                 </button>
             {showLoginModal && (
                 <Modal close={closeModals}>
-                    <FormLogin/>
+                    <FormLogin closeModal={closeModals}/>
                 </Modal>
             )}    
                 
@@ -33,7 +33,7 @@ const AuthNav=()=>{
             <button type="button" className={css.registrationBtn} onClick={openRegisterModal}>Registration</button>
             {showRegisterModal && (
                 <Modal close={closeModals}>
-                    <FormRegister/>
+                    <FormRegister closeModal={closeModals}/>
                 </Modal>
             )}   
         </div>

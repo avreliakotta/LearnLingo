@@ -11,15 +11,22 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'
 import {teachersReducer} from "./teachers/teachers-slice";
-const persisTeacherstConfig = {
+import { authReducer} from "./auth/auth-slice";
+const persistTeacherstConfig = {
   key: 'teachers',
   storage,
 
 }
-const persistedTeachersReducer=persistReducer(persisTeacherstConfig,teachersReducer)
+const persistAuthConfig={
+  key:"auth",
+  storage,
+}
+const persistedTeachersReducer=persistReducer(persistTeacherstConfig,teachersReducer);
+const persistedAuthReducer=persistReducer(persistAuthConfig,authReducer)
  export const store = configureStore({
   reducer:{
     teachers:persistedTeachersReducer,
+    auth:persistedAuthReducer
   },
   middleware: getDefaultMiddleware =>
   getDefaultMiddleware({

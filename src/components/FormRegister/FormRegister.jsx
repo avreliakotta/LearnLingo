@@ -1,13 +1,42 @@
+import { useDispatch } from 'react-redux';
 import css from "./form-register.module.css";
 import sprite from "../../img/symbol-defs.svg";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import {registerSchema} from "../../shemas/auth-shemas";
-const FormRegister=()=>{
+import {register} from "../../redux/auth/auth-operations";
+import toast from 'react-hot-toast';
+const FormRegister=({closeModal})=>{
+  const dispatch=useDispatch();
     const initialValues = {
         name:"",
-        email: '',
-        password: '',
+        email: "",
+        password: "",
+        
       };
+      const handleSubmit = async (
+        values,
+        { setSubmitting, resetForm, setError }
+      ) => {
+        
+        try{
+          await dispatch(register(values));
+         
+        setTimeout(() => {
+          toast.success('Register successful!', { position: 'top-center' });
+         
+          setSubmitting(false);
+          resetForm();
+          closeModal();
+        }, 1000); 
+        
+        } catch (error) {
+          toast.error('Register failed. Please, try again.', {
+            position: 'top-center'})
+          
+          };
+          setSubmitting(false);
+        }
+      
     return(
         <>
         <h1 className={css.title}>Registration</h1>
@@ -15,6 +44,7 @@ const FormRegister=()=>{
         <Formik 
          initialValues={initialValues}
          validationSchema={registerSchema}
+         onSubmit={handleSubmit}
         >
              {({ errors, touched }) => (
             <Form className={css.loginForm}>
