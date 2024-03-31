@@ -1,0 +1,77 @@
+.headerSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.logoText {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.navList {
+  display: flex;
+  gap: 2.8rem;
+}
+
+.link {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  color: var(--main-color);
+}
+
+.loginIcon {
+  width: 2rem;
+  height: 2rem;
+  stroke: var(--addition-color);
+}
+
+.authWrapper {
+  display: flex;
+  gap: 2.3rem;
+  align-items: center;
+}
+.loginBtn {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  color: var(--addition-color);
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.registrationBtn {
+  border-radius: 1.2rem;
+  padding: 1.4rem 3.9rem;
+  max-width: 16.6rem;
+  height: 4.8rem;
+  background-color: var(--addition-color);
+  border: none;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  color: var(--invent-color);
+}
+
+.logoText::before {
+  content: '';
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 10rem;
+  background-color: var(--addition-color);
+  display: block;
+}

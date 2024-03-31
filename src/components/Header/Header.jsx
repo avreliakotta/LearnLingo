@@ -10,6 +10,7 @@ import { logoutUser } from '../../redux/auth/auth-slice';
 import { selectIsAuth } from '../../redux/auth/auth-selectors';
 
 const Header = () => {
+ 
   const isAuth = useSelector(selectIsAuth);
   const dispatch = useDispatch();
   const handlerLogout = () => {
@@ -17,21 +18,24 @@ const Header = () => {
   };
   return (
     <header className={css.headerSection}>
+      <NavLink to="/">
       <div className={css.logoWrap}>
         <svg className={css.logoIcon}>
           <use href={`${sprite}#icon-logo`}></use>
         </svg>
         <p className={css.logoText}>LearnLingo</p>
       </div>
+      </NavLink>
+
       <nav>
         <ul className={css.navList}>
           <li>
-            <NavLink to="/" className={css.link}>
+            <NavLink to="/"  className={css.link}>
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/teachers" className={css.link}>
+            <NavLink to="/teachers"  className={css.link} >
               Teachers
             </NavLink>
           </li>

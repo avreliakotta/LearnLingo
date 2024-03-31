@@ -1,9 +1,9 @@
 import {info} from "./info";
 import css from "./info-block.module.css";
-const InfoBlock =()=>{
+const InfoBlock =({additionalClass})=>{
     
     return(
-        <div className={css.container}>
+        <div className={`${css.container} ${additionalClass}`}>
             <ul className={css.infoList}>
              {info.map(({number,text,id})=>
     <li className={css.item} key={id}>

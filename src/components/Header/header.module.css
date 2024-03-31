@@ -37,6 +37,9 @@ color:var(--main-color);
     color:var(--decorate-color);
     border-bottom:0.2rem solid var(--decorate-color);
 }
+
+
+
 @media screen and (max-width: 767px){
     .navList{
         display: none;
