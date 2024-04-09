@@ -64,6 +64,7 @@ outline:none;
 .radioBtnWrap{
     display: flex;
     flex-direction:column;
+    align-items:flex-start;
     gap:1.6rem;
 }
 .label{
@@ -98,31 +99,13 @@ var(--transition-time-function);
 .submitBtn:is(:hover,:focus){
     background-color: var(--accent-color);
 }
-input[type="radio"]{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width:2.4rem;
-    height:2.4rem;
-    margin:0;
-    border-radius: 10rem;
-    border: 2px solid rgba(18, 20, 23, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-}
-input[type="radio"]::before {
-    content: ''; 
-    width: 1.2rem; 
-    height: 1.2rem;
-    background-color: transparent; 
-    border-radius: 50%; 
-
+.success {
+    border: 0.1rem solid var(--success-color);
   }
-  input[type="radio"]:checked::before {
-    background-color: var(--decorate-color); 
+  .error {
+    border: 0.1rem solid var(--error-color);
   }
-input[type="radio"]:checked{
-     border:0.1rem solid var(--decorate-color);
-}
+  .textError{
+   padding-left:1.6rem;
+   color: rgba(18, 20, 23, 0.8);
+  }

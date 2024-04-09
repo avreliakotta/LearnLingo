@@ -3,11 +3,7 @@
     height: 2rem;
     
 }
-/* .loginWrapper{
-    display: flex;
-    gap:0.8rem;
-    align-items: center;
-} */
+
 .authWrapper{
     display: flex;
     gap:2.3rem;
@@ -45,7 +41,10 @@ transition: background-color var(--transition-duration) var(--transition-time-fu
     background-color:var(--invent-color);
 }
 @media screen and (max-width: 767px){
-    .authWrapper{
-        display: none;
+            .authWrapper {
+          
+       flex-direction: column;
+       align-items: center;
     }
+  
 }

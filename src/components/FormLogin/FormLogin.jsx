@@ -2,7 +2,7 @@ import css from "./form-login.module.css";
 import { useDispatch } from 'react-redux';
 import sprite from "../../img/symbol-defs.svg";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { logInSchema } from "../../shemas/auth-shemas";
+import { logInSchema } from "../../shemas/auth-schemas";
 import {login} from "../../redux/auth/auth-operations";
 import toast from 'react-hot-toast';
 const FormLogin=({closeModal})=>{
@@ -65,6 +65,7 @@ const FormLogin=({closeModal})=>{
                     />
                     </div>
             <div className={css.inputWrapper}>
+            
             <Field
   type="password" 
   name="password"

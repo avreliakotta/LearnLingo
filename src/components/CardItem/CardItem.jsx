@@ -26,6 +26,7 @@ const CardItem = ({ teacher }) => {
   const isAuth = useSelector(selectIsAuth);
   const isFavorite = favorites.some(item => item.id === teacher.id);
   const {
+    id,
     avatar_url,
     lessons_done,
     rating,
@@ -140,7 +141,7 @@ const CardItem = ({ teacher }) => {
           {expanded && <BookBtn onClick={openBookModal} />}
           {expanded && showBookModal && (
             <Modal close={closeBookModal}>
-              <FormBooking teaherPhoto={avatar_url} name={name} />
+              <FormBooking teaherPhoto={avatar_url} name={name} id={id} />
             </Modal>
           )}
         </div>

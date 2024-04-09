@@ -81,3 +81,11 @@ outline: none;
     padding-left:1.6rem;
     color: rgba(18, 20, 23, 0.8);
    }
+   @media screen and (max-width: 767px){
+    .authInput{
+        max-width:100%;
+    
+    }
+   }
+
+ 

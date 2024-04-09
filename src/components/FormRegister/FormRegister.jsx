@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import css from "./form-register.module.css";
 import sprite from "../../img/symbol-defs.svg";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import {registerSchema} from "../../shemas/auth-shemas";
+import {registerSchema} from "../../shemas/auth-schemas";
 import {register} from "../../redux/auth/auth-operations";
 import toast from 'react-hot-toast';
 const FormRegister=({closeModal})=>{

@@ -40,13 +40,25 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
+  .item{
+    gap:0.5rem;
+  }
 }
 
-@media screen and (max-width: 767px) {
+ @media screen and (max-width: 767px) {
   .container {
-    max-width: 34.5rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    max-width: 100%;
+    padding: 2rem  6rem;
+   
+   
   }
+  .infoList{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:1.6rem;
+
+  }
+  
  
-}
+} 

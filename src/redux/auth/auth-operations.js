@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import app from '../../firebase/firebase';
 const auth = getAuth(app);
 export const register = createAsyncThunk(
@@ -18,7 +18,7 @@ export const register = createAsyncThunk(
         email: userCredential.user.email,
        
       };
-     
+    
       return user;
      
     } catch (error) {
@@ -30,7 +30,7 @@ export const register = createAsyncThunk(
   }
 );
 
-export const login=createAsyncThunk(
+export const login = createAsyncThunk(
     'auth/signin',
     async ({  email, password }, { rejectWithValue }) => {
       try {
@@ -52,3 +52,20 @@ export const login=createAsyncThunk(
       }
     }
   );
+  // export const currentUser=createAsyncThunk(
+  //   'auth/signin',
+  //   async ({  email, password }, { rejectWithValue }) => {
+  //    const onAuthStateChanged=(auth, (user) => {
+  //     if (user) {
+  //       // User is signed in, see docs for a list of available properties
+  //       // https://firebase.google.com/docs/reference/js/auth.user
+  //       const uid = user.uid;
+  //       // ...
+  //     } else {
+  //       // User is signed out
+  //       // ...
+  //     }
+  //   });
+    
+
+  // })

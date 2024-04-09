@@ -16,7 +16,7 @@ const AuthNav=()=>{
     return(
         <div className={css.authWrapper}>
             <div className={css.loginWrapper}>
-                <button type="button"className={css.loginBtn} onClick={openLoginModal}>
+                <button type="button"className={css.loginBtn} onClick={openLoginModal} >
                 
                 <svg className={css.loginIcon}>
                     <use href={`${sprite}#icon-log`}></use>

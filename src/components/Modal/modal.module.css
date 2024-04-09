@@ -12,7 +12,7 @@
         }
 .modal{
     border-radius: 3rem;
-    width: 56.5rem;
+    max-width: 56.5rem;
     height: auto;
     background-color: var(--invent-color);
     padding:6.4rem;
@@ -40,4 +40,12 @@ color:var(--main-color);
     width:1.6rem;
     height:1.6rem;
     stroke:currentColor;
+}
+@media screen and (max-width: 767px){ 
+    .modal{
+        padding:3.2rem;
+        max-width:96%;
+      
+        
+    } 
 }

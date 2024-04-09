@@ -1,6 +1,6 @@
 .contentWrapper {
   max-width: 72rem;
-  height: 53rem;
+  /* height: 53rem; */
   border-radius: 3rem;
   padding: 9.8rem 10.8rem 9.8rem 6.4rem;
   background-color: var(--second-color);
@@ -27,7 +27,6 @@
   font-weight: 400;
   position: relative;
   z-index: 10;
-  padding-left: 0.3rem;
   padding-left: 0.3rem;
 }
 .part::before {
@@ -79,39 +78,71 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .contentWrapper {
-    padding: 4rem 2rem 4rem 2rem;
+  .heroWrapper {
+    max-width: 100%;
+    gap: 1.5rem;
     height: auto;
   }
+  .contentWrapper {
+    padding: 4rem 2rem 4rem 2rem;
+    max-width: 55%;
+  }
+  .imgThumb {
+    max-width: 43%;
+  }
+  .heroImg {
+    max-width: 100%;
+
+    object-fit: cover;
+  }
+  .heroText {
+    margin-bottom: 3.2rem;
+  }
+  .heroTitle {
+    margin-bottom: 2rem;
+  }
 }
-/* .heroWrapper {
-        display:flex;
-        /* flex-direction: column; */
-/* gap:1.8rem; */
-/* justify-content: center; */
 
-/* .heroImg{
-        display: block;
-        border-radius: 3.5rem;
-        max-width:72rem;
-        
-        
-    } */
+@media screen and (max-width: 767px) {
+  .heroWrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    gap: 1.6rem;
+  }
+  .contentWrapper {
+    padding: 2rem;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 15;
+  }
 
-/* @media screen and (max-width: 767px) {
-     .contentWrapper{
-        text-align: start;
-    } 
-     .heroWrapper {
-        flex-direction: column;
-        gap:1.8rem;
-        justify-content: center;
-    }
-    .heroImg{
-        display: block;
-        border-radius: 3rem;
-        max-width:72rem;
-        height:53rem;
-        width:100%;
-    } 
-  } */
+  .imgThumb {
+    max-width: 100%;
+  
+   
+  }
+  .heroText {
+    margin-bottom: 2rem;
+  }
+  .heroTitle {
+    margin-bottom: 2rem;
+  }
+  .heroImg {
+    object-fit: cover;
+  }
+  .part {
+    position: static;
+  }
+  .part::before {
+    top: 20rem;
+    right: 0rem;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .heroWrapper {
+    margin-bottom: 1.6rem;
+  }
+}

@@ -1,0 +1,47 @@
+.label {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0;
+  border-radius: 10rem;
+  border: 2px solid rgba(18, 20, 23, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.label::before {
+  content: '';
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: transparent;
+  border-radius: 50%;
+  display: block;
+}
+input[type='radio']:checked + .label::before {
+  background-color: var(--decorate-color);
+}
+input[type='radio']:checked + .label {
+  border: 0.2rem solid var(--decorate-color);
+}
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.37;
+  text-align: center;
+  color: var(--main-color);
+}
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
