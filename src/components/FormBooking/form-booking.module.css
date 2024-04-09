@@ -109,3 +109,30 @@ var(--transition-time-function);
    padding-left:1.6rem;
    color: rgba(18, 20, 23, 0.8);
   }
+  @media screen and (max-width:767px) {
+    .input{
+max-width:100%;
+height:4.8rem;
+    }
+    .submitBtn{ 
+    padding:1.6rem 14rem;
+    text-align: center;
+    }
+    .imgWrap{
+margin-bottom:2.4rem;
+
+    }
+    .textBooking{
+        margin-bottom: 1.6rem;
+    }
+    .bokingTitle{
+        margin-bottom: 1.6rem;
+        margin-top: 0.3rem;
+    }
+    .bookingForm{
+gap:2.4rem;
+    }
+    .radioBtnWrap{
+        gap:1rem;
+    }
+  }

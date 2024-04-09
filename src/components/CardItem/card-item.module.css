@@ -32,9 +32,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  overflow:hidden;
-  
- 
+  overflow: hidden;
 }
 .circle {
   width: 1.2rem;
@@ -167,38 +165,74 @@
   line-height: 1;
   color: var(--main-color);
 }
-@media screen and (max-width:767px) {
+
+@media screen and (max-width: 1024px) {
   .cardWrap {
-    max-width:100%;
-    display: flex;
+    gap: 2rem;
     flex-direction: column;
-    position:relative;
-    padding:1.6rem;
+    max-width: 100%;
+    position: relative;
   }
-  .contentWrap{
+  .contentWrap {
     flex-direction: column;
     align-items: flex-start;
-   
+  }
+
+  .topBlock {
+    gap: 1.8rem;
+    margin-bottom: 2rem;
   }
   .iconHeartBtn {
-    position:absolute;
-    top:2.4rem;
-    right:2.4rem;
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+  }
+  .title {
+    position: absolute;
+    top: 6rem;
+    left: 18rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cardWrap {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 1.6rem;
+    gap: 2.4rem;
+  }
+  .contentWrap {
+    flex-direction: column;
+    align-items: flex-start;
+   max-width:100%;
+  }
+  .iconHeartBtn {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
   }
   .topBlock {
-    flex-direction:column;
-    gap:0.8rem;
+  max-width: 100%;
+    gap: 0.3rem;
+    flex-direction: column;
+    margin-bottom: 12rem;
+    
   }
-  .buttonList{
+  .buttonList {
     flex-direction: column;
   }
-  /* .title{
-position: absolute;
-top:0;
-right:0;
-  } */
+  .title {
+    position: absolute;
+    top: 6rem;
+    left: 16rem;
+  }
 
-  /* .text{
-    margin-bottom: 3.2rem;
-  } */
+  .columnWrapper {
+    gap: 2.4rem;
+  }
+  .text {
+    margin-bottom: 1rem;
+  }
 }

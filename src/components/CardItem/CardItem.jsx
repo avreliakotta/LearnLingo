@@ -62,12 +62,14 @@ const CardItem = ({ teacher }) => {
 
   return (
     <li className={css.cardWrap}>
+     
       <div className={css.imgWrapper}>
         <img src={avatar_url} alt="avatar" className={css.avatarImg} />
         <div className={css.circle}></div>
       </div>
       <div className={css.wrapper}>
         <div className={css.contentWrap}>
+        
           <p className={css.text}>Languages</p>
           <div className={css.topBlock}>
             <div className={css.iconWrap}>
@@ -88,6 +90,7 @@ const CardItem = ({ teacher }) => {
               <span className={css.priceText}>{price_per_hour}$</span>
             </p>
           </div>
+        
           <button
             type="button"
             className={css.iconHeartBtn}
@@ -100,6 +103,7 @@ const CardItem = ({ teacher }) => {
             </svg>
           </button>
         </div>
+        
         <div className={css.columnWrapper}>
           <h2 className={css.title}>{name}</h2>
           <div className={css.benefitsWrap}>

@@ -46,3 +46,14 @@ color: var(--main-color);
     flex-direction: column;
     gap:3.2rem;
 }
+@media screen and (max-width:767px) {
+    .detailsList{
+        gap:2.4rem;
+    }
+    .contentWrap{
+        margin-bottom:1rem ;
+          }
+          .experienceText{
+            margin-bottom: 2.4rem;
+          }
+}
