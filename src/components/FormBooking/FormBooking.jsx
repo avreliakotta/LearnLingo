@@ -10,7 +10,6 @@ import { getDatabase, ref, push } from 'firebase/database';
 import app from '../../firebase/firebase';
 
 const FormBooking = ({ teacherPhoto, name, id, closeModal }) => {
-  console.log('Starting handleSubmit...');
   const initialValues = {
     course: '',
     email: '',
@@ -28,10 +27,9 @@ const FormBooking = ({ teacherPhoto, name, id, closeModal }) => {
         ...values,
         teacherId: id,
       };
-      console.log('bookingData before push:', bookingData);
 
-      await push(bookingsRef,bookingData  );
-      console.log('Booking successful!');
+      await push(bookingsRef, bookingData);
+
       setTimeout(() => {
         toast.success('Book successful!', { position: 'top-center' });
         alert(JSON.stringify(values, null, 2));
@@ -40,7 +38,6 @@ const FormBooking = ({ teacherPhoto, name, id, closeModal }) => {
         closeModal();
       }, 1000);
     } catch (error) {
-      console.error('Error submitting form:', error);
       toast.error('Book failed. Please, try again.', {
         position: 'top-center',
       });
@@ -86,8 +83,7 @@ const FormBooking = ({ teacherPhoto, name, id, closeModal }) => {
                 <Field
                   type="text"
                   name="name"
-                  // onChange={handleChange}
-                  value={values.name || ""}
+                  value={values.name || ''}
                   placeholder="Full Name"
                   className={`${css.input} ${
                     errors.name && touched.name ? css.error : ''

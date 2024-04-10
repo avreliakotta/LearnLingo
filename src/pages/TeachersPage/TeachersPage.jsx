@@ -5,6 +5,7 @@ import { fetchAll } from '../../redux/teachers/teachers-operations';
 import { selectTeachers } from '../../redux/teachers/teachers-selectors';
 import CardList from '../../components/CardList/CardList';
 import Container from '../../components/Container/Container';
+
 const TeachersPage = () => {
   const cachedVisibleTeachers = localStorage.getItem('visibleTeachers');
   const [visibleTeachers, setVisibleTeachers] = useState(
@@ -13,14 +14,12 @@ const TeachersPage = () => {
 
   const dispatch = useDispatch();
   const data = useSelector(selectTeachers);
-console.log("data",data);
 
   useEffect(() => {
     dispatch(fetchAll());
   }, [dispatch]);
   if (typeof data !== 'object' || data === null) {
     return <div>Loading...</div>;
-
   }
   const teachersArray = Object.values(data);
   const loadMoreTeachers = () => {
@@ -28,16 +27,13 @@ console.log("data",data);
     setVisibleTeachers(newVisibleTeachers);
     localStorage.setItem('visibleTeachers', newVisibleTeachers);
   };
-  // if (!Array.isArray(data)) {
-  //   return <div>Loading...</div>;
-  // }
 
   return (
     <main>
       <section>
         <Container backgroundColor="#eee">
-          <CardList data={ teachersArray.slice(0, visibleTeachers)} />
-          {visibleTeachers <  teachersArray.length && (
+          <CardList data={teachersArray.slice(0, visibleTeachers)} />
+          {visibleTeachers < teachersArray.length && (
             <button className={css.loadMoreBtn} onClick={loadMoreTeachers}>
               Load more
             </button>
