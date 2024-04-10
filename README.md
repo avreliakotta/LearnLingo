@@ -48,7 +48,7 @@ Registered users enjoy additional features, including:
 
 ---
 
-For more information, visit our [website](avreliakotta.github.io/LearnLingo/) 
+
 
 
 
