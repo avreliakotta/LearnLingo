@@ -2,7 +2,8 @@ import css from "./radio-button.module.css";
 const RadioButton=({name,label,id,value,checked,onChange})=>{
     return(
         <>
-         <label htmlFor="id" className={css.radioLabel}>
+         <label htmlFor={id} className={css.radioLabel}>
+        
             <input
               type="radio"
               id={id}
@@ -13,7 +14,8 @@ const RadioButton=({name,label,id,value,checked,onChange})=>{
               className={css.visuallyHidden}
             />
             <span className={css.label}></span>
-           {label}</label>
+            {label}
+            </label>
         </>
     )
 }

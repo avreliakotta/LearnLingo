@@ -37,6 +37,7 @@ const CardItem = ({ teacher }) => {
     conditions,
     levels,
   } = teacher;
+  // console.log("teacher", teacher)
 
   const speaks = languages ? languages.join(', ') : '';
 
@@ -57,8 +58,8 @@ const CardItem = ({ teacher }) => {
       dispatch(addToFavorites(teacher));
     }
   };
-  const openBookModal = () => setShowBookModal(true);
-  const closeBookModal = () => setShowBookModal(false);
+  const openModal = () => setShowBookModal(true);
+  const closeModal = () => setShowBookModal(false);
 
   return (
     <li className={css.cardWrap}>
@@ -142,10 +143,10 @@ const CardItem = ({ teacher }) => {
                 </li>
               ))}
           </ul>
-          {expanded && <BookBtn onClick={openBookModal} />}
+          {expanded && <BookBtn onClick={openModal} />}
           {expanded && showBookModal && (
-            <Modal close={closeBookModal}>
-              <FormBooking teaherPhoto={avatar_url} name={name} id={id} />
+            <Modal close={closeModal}>
+              <FormBooking teacherPhoto={avatar_url} name={name} id={id} closeModal={closeModal} />
             </Modal>
           )}
         </div>

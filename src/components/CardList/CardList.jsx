@@ -2,6 +2,7 @@ import css from './card-list.module.css';
 import CardItem from '../CardItem/CardItem';
 
 const CardList = ({ data }) => {
+  console.log("data in CardList",data)
   return (
     <ul className={css.cardList}>
       {data.map(teacher => (

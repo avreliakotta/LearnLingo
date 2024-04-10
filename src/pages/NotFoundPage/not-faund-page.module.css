@@ -80,3 +80,72 @@ color:var(--main-color);
 .notFoundInfoBlock{
     border:0.15rem dashed var(--addition-color);
 }
+@media screen and (max-width: 1024px) {
+    .heroWrapper {
+      max-width: 100%;
+      gap: 1.5rem;
+      height: auto;
+    }
+    .contentWrapper {
+      padding: 4rem 2rem 4rem 2rem;
+      max-width: 55%;
+    }
+    .imgThumb {
+      max-width: 43%;
+    }
+    .heroImg {
+      max-width: 100%;
+  
+      object-fit: cover;
+    }
+    .heroText {
+      margin-bottom: 3.2rem;
+    }
+    .heroTitle {
+      margin-bottom: 2rem;
+    }
+  }
+  
+@media screen and (max-width: 767px) {
+    .heroWrapper {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      gap: 1.6rem;
+    }
+    .contentWrapper {
+      padding: 2rem;
+      max-width: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 15;
+    }
+  
+    .imgThumb {
+      max-width: 100%;
+    
+     
+    }
+    .heroText {
+      margin-bottom: 2rem;
+    }
+    .heroTitle {
+      margin-bottom: 2rem;
+    }
+    .heroImg {
+      object-fit: cover;
+    }
+    .part {
+      position: static;
+    }
+    .part::before {
+      top: 14rem;
+      left: 17rem;
+      width: 47%;
+     
+     
+    }
+    .heroWrapper {
+      margin-bottom: 1.6rem;
+    }
+  }

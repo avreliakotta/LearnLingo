@@ -1,6 +1,8 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
+
 import { useLocation } from 'react-router-dom';
+
 import Header from '../Header/Header';
 import Container from '../Container/Container';
 import NotFoundHeader from '../NotFoundHeader/NotFoundHeader';
@@ -18,9 +20,9 @@ const Layout = () => {
       
         <Container>
       { isNotFoundPage ? <NotFoundHeader/> :<Header />}
-          <Suspense fallback={<div>Loading...</div>}>
+          {/* <Suspense fallback={<div>Loading...</div>}> */}
             <Outlet />
-          </Suspense>
+          {/* </Suspense> */}
         </Container>
       
     

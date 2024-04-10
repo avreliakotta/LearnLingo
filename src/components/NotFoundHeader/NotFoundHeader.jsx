@@ -9,8 +9,9 @@ const NotFoundHeader = () => {
           <p className={css.logoText}>LearnLingo</p>
         </div>
       </NavLink>
-
+      
       <nav>
+    
         <ul className={css.navList}>
           <li>
             <NavLink to="/" className={css.link}>
@@ -36,7 +37,20 @@ const NotFoundHeader = () => {
         <button type="button" className={css.registrationBtn}>
           Registration
         </button>
-      </div>
+       </div> 
+       <div className={css.burgerWrapper}>
+        <button
+            type="button"
+            className={css.burgerBtn}
+            
+          >
+           <svg className={css.burgerIcon}>
+           
+              <use href={`${sprite}#icon-burger`}></use>
+            </svg>
+          </button>
+        </div>
+     
     </header>
   );
 };

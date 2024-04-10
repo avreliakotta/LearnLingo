@@ -6,10 +6,10 @@ import AuthNav from '../AuthNav/AuthNav';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { LogOutBtn } from '../LogOutBtn/LogOutBtn';
-// import HeaderNav from '../HeaderNav/HeaderNav';
+
 import { logoutUser } from '../../redux/auth/auth-slice';
 import { selectIsAuth } from '../../redux/auth/auth-selectors';
-// import MobileMenu from '../MobileMenu/MobileMenu';
+
 
 const Header = () => {
   const isAuth = useSelector(selectIsAuth);
@@ -57,12 +57,14 @@ const Header = () => {
         )}
       </ul>
         </nav>
+        <div>
         {isAuth ? <LogOutBtn onClick={handlerLogout} /> : <AuthNav/>}
         {isOpen &&<button type="button" className={css.closeBtn} onClick={handleMobileMenuToggle }>
           <svg className={css.closeIcon}>
             <use href={`${sprite}#icon-close`}></use>
           </svg>
         </button>}
+        </div>
         </div>
         <div className={css.burgerWrapper}>
         {!isOpen && <button

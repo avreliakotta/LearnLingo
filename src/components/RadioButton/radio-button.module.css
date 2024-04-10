@@ -12,14 +12,16 @@
   content: '';
   width: 1.2rem;
   height: 1.2rem;
-  background-color: transparent;
+  background-color: var(--decorate-color);
   border-radius: 50%;
-  display: block;
+  display: inline-block;
+  display: none ;
 }
 input[type='radio']:checked + .label::before {
-  background-color: var(--decorate-color);
+  /* background-color: var(--decorate-color); */
+  display: block;
 }
-input[type='radio']:checked + .label {
+input[type='radio']:checked +.label {
   border: 0.2rem solid var(--decorate-color);
 }
 .radioLabel {
