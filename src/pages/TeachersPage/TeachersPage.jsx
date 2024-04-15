@@ -24,6 +24,9 @@ const TeachersPage = () => {
   const loadMoreTeachers = () => {
     setVisibleTeachers(prevVisibleTeachers => prevVisibleTeachers + 4);
   };
+  if (!Array.isArray(data) || data.length === 0) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <main>
