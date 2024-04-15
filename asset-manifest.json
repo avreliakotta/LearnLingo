@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/LearnLingo/static/css/main.161a808a.css",
-    "main.js": "/LearnLingo/static/js/main.c03d70de.js",
+    "main.js": "/LearnLingo/static/js/main.a9fecae0.js",
     "static/css/429.58b88da7.chunk.css": "/LearnLingo/static/css/429.58b88da7.chunk.css",
     "static/js/429.089462df.chunk.js": "/LearnLingo/static/js/429.089462df.chunk.js",
     "static/css/468.1f1fd4b3.chunk.css": "/LearnLingo/static/css/468.1f1fd4b3.chunk.css",
-    "static/js/468.b680d556.chunk.js": "/LearnLingo/static/js/468.b680d556.chunk.js",
+    "static/js/468.83f62df8.chunk.js": "/LearnLingo/static/js/468.83f62df8.chunk.js",
     "static/css/142.34ca766e.chunk.css": "/LearnLingo/static/css/142.34ca766e.chunk.css",
     "static/js/142.7da0916a.chunk.js": "/LearnLingo/static/js/142.7da0916a.chunk.js",
     "static/css/518.0de995f6.chunk.css": "/LearnLingo/static/css/518.0de995f6.chunk.css",
@@ -18,11 +18,11 @@
     "static/media/symbol-defs.svg": "/LearnLingo/static/media/symbol-defs.b890276cd3fc9993352ce5e346fe0128.svg",
     "index.html": "/LearnLingo/index.html",
     "main.161a808a.css.map": "/LearnLingo/static/css/main.161a808a.css.map",
-    "main.c03d70de.js.map": "/LearnLingo/static/js/main.c03d70de.js.map",
+    "main.a9fecae0.js.map": "/LearnLingo/static/js/main.a9fecae0.js.map",
     "429.58b88da7.chunk.css.map": "/LearnLingo/static/css/429.58b88da7.chunk.css.map",
     "429.089462df.chunk.js.map": "/LearnLingo/static/js/429.089462df.chunk.js.map",
     "468.1f1fd4b3.chunk.css.map": "/LearnLingo/static/css/468.1f1fd4b3.chunk.css.map",
-    "468.b680d556.chunk.js.map": "/LearnLingo/static/js/468.b680d556.chunk.js.map",
+    "468.83f62df8.chunk.js.map": "/LearnLingo/static/js/468.83f62df8.chunk.js.map",
     "142.34ca766e.chunk.css.map": "/LearnLingo/static/css/142.34ca766e.chunk.css.map",
     "142.7da0916a.chunk.js.map": "/LearnLingo/static/js/142.7da0916a.chunk.js.map",
     "518.0de995f6.chunk.css.map": "/LearnLingo/static/css/518.0de995f6.chunk.css.map",
@@ -34,6 +34,6 @@
   },
   "entrypoints": [
     "static/css/main.161a808a.css",
-    "static/js/main.c03d70de.js"
+    "static/js/main.a9fecae0.js"
   ]
 }
