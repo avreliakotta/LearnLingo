@@ -37,7 +37,7 @@ const CardItem = ({ teacher }) => {
     conditions,
     levels,
   } = teacher;
-  // console.log("teacher", teacher)
+ 
 
   const speaks = languages ? languages.join(', ') : '';
 

@@ -142,6 +142,10 @@
   color: var(--main-color);
   display: flex;
   padding: 0;
+  transition: color  var(--transition-duration) var(--transition-time-function) ;
+}
+.moreBtn:is(:hover, :focus){
+  color:var(--decorate-color);
 }
 .benefitsText {
   font-family: var(--font-family);

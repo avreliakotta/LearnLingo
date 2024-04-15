@@ -19,7 +19,12 @@
   display: flex;
   align-items: center;
   gap: 0.8rem;
+   transition:color var(--transition-duration) var(--transition-time-function);
 }
+.loginBtn:is(:hover, :focus){
+  color:var(--decorate-color);
+}
+
 .registrationBtn {
   border-radius: 1.2rem;
   padding: 1.4rem 3.9rem;

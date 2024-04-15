@@ -23,8 +23,7 @@ color: var(--main-color);
     position: relative;
     display: flex;
     align-items: center;
-    /* gap:26.8rem;  */
-    /* justify-content: center;  */
+   
     justify-content: space-around;
     padding-top:2rem;
     padding-bottom:2rem;
@@ -35,10 +34,14 @@ font-weight: 400;
 font-size: 1.6rem;
 line-height: 1.25;
 color:var(--main-color);
+transition:color  var(--transition-duration) var(--transition-time-function),
 }
 .link:global(.active){
     color:var(--decorate-color);
     border-bottom:0.2rem solid var(--decorate-color);
+}
+.link:is(:hover, :focus){
+    color:var(--decorate-color);
 }
 
 .burgerBtn{

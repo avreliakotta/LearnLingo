@@ -13,4 +13,8 @@ border:none;
 display: flex;
 align-items: center;
 gap:0.8rem;
+transition: color  var(--transition-duration) var(--transition-time-function);
+}
+.logOutBtn:is(:hover, :focus){
+    color:var(--decorate-color);
 }
