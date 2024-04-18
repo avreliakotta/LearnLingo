@@ -17,10 +17,32 @@
     background-color: var(--invent-color);
     padding:6.4rem;
     position: absolute;
+    
+    max-height: 96vh;
+    overflow-y: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.modal::-webkit-scrollbar {
+    width: 1rem; 
+    max-height:5rem;
+    padding-right: 1rem;
+    border-top-right-radius: 3rem;
+   
+    
+  }
+  
+  .modal::-webkit-scrollbar-track {
+    background: #fff; 
+   
+    max-height:90%;
+  }
+  
+  .modal::-webkit-scrollbar-thumb {
+    background: #eee; 
+    border-radius: 1rem;
+  }
 .closeBtn{
 position: absolute;
 top:2.8rem;

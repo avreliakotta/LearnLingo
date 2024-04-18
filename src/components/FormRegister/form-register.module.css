@@ -49,6 +49,10 @@ width: 43.8rem;
 height: 5.4rem;
 background-color:#fff;
 outline: none;
+transition: outline var(--transition-duration) var(--transition-time-function);
+}
+.authInput:focus{
+    outline: 0.1rem solid var(--decorate-color);
 }
 .authInput::placeholder{
     font-family: var(--font-family);

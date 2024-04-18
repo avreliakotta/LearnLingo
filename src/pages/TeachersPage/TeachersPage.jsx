@@ -30,14 +30,17 @@ const TeachersPage = () => {
 
   return (
     <main>
-      <section>
-        <Container backgroundColor="#eee">
+      <section className={css.teachersSection}> 
+         <Container backgroundColor="#eee">
+       
+       
           <CardList data={data.slice(0, visibleTeachers)} />
           {visibleTeachers < data.length && (
             <button className={css.loadMoreBtn} onClick={loadMoreTeachers}>
               Load more
             </button>
           )}
+         
         </Container>
       </section>
     </main>

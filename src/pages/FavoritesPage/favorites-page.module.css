@@ -4,3 +4,18 @@
     gap:3.2rem;
     padding-top:3.2rem;
 }
+.favoritesSection{
+    width:100%;
+    height:100%;
+    background-color: #eee;
+}
+.favoritesTitle{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: var(--main-color);
+    padding-top:6.4rem;
+    text-align:center;
+}

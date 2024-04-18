@@ -8,12 +8,19 @@ const FavoritesPage = () => {
 
   return (
     <main>
-      <Container backgroundColor="#eee">
-        <ul className={css.fivoritesList}>
-          {favorites &&
-            favorites.map(item => <CardItem key={item.id} teacher={item} />)}
-        </ul>
-      </Container>
+      <section className={css.favoritesSection}>
+        <Container backgroundColor="#eee">
+          {favorites && favorites.length > 0 ? (
+            <ul className={css.fivoritesList}>
+              {favorites.map(item => (
+                <CardItem key={item.id} teacher={item} />
+              ))}
+            </ul>
+          ) : (
+            <h1 className={css.favoritesTitle}>Favorites Teachers</h1>
+          )}
+        </Container>
+      </section>
     </main>
   );
 };

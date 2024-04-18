@@ -1,71 +1,79 @@
 /* @import-normalize; bring in normalize.css styles */
-:root{
-  --main-color:#121417;
+:root {
+  --main-color: #121417;
   --decorate-color: #f4c550;
-  --invent-color:#fff;
-  --second-color:#f8f8f8;
+  --invent-color: #fff;
+  --second-color: #f8f8f8;
   --accent-color: #fbe9ba;
-  --backdrop-color:rgba(0, 0, 0, 0.5);
+  --backdrop-color: rgba(0, 0, 0, 0.5);
   --success-color: #3cbf61;
   --error-color: #d80027;
-  --addition-color:#8a8a89;
-  --rare-color:#38cd3e;
-  
-  --font-family: "Roboto", sans-serif;
+  --addition-color: #8a8a89;
+  --rare-color: #38cd3e;
+
+  --font-family: 'Roboto', sans-serif;
   --transition-duration: 250ms;
   --transition-time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-html{
-  font-size:calc(100vw / 1440 * 10);
+html {
+  font-size: calc(100vw / 1440 * 10);
 }
-@media screen  and (max-width:1024px){
-  html{
+@media screen and (max-width: 1024px) {
+  html {
     font-size: calc(100vw / 768 * 10);
   }
-  
 }
-@media screen  and (max-width:767px){
-  html{
+@media screen and (max-width: 767px) {
+  html {
     font-size: calc(100vw / 375 * 10);
   }
-  
 }
 *,
 *::before,
-*::after
-{
+*::after {
   box-sizing: border-box;
 }
-body {
+body,
+html {
   margin: 0;
-  height:100vh;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-h1,h2,h3,h4,h5,h6,p,span{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
   margin-top: 0;
-  margin-bottom:0 ;
+  margin-bottom: 0;
 }
-a{
-  text-decoration:none;
+a {
+  text-decoration: none;
 }
-ul,ol{
+ul,
+ol {
   list-style-type: none;
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
-input{
-  padding:0;
+input {
+  padding: 0;
 }
-button{
-  cursor:pointer;
+button {
+  cursor: pointer;
 }
-

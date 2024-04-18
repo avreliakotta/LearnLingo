@@ -60,6 +60,10 @@ padding-left: 1.6rem ;
 width: 47.2rem;
 height: 5.4rem;
 outline:none;
+transition: outline var(--transition-duration) var(--transition-time-function);
+}
+.input:focus{
+    outline: 0.1rem solid var(--decorate-color);
 }
 .radioBtnWrap{
     display: flex;

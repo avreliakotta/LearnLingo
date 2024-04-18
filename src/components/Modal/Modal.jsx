@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import css from "./modal.module.css";
 import {createPortal} from "react-dom";
 import sprite from "../../img/symbol-defs.svg";
+
 const modalRoot = document.querySelector('#modal-root');
 const Modal=({children, close})=>{
     const closeModal = ({ target, currentTarget, code }) => {
@@ -13,6 +14,16 @@ const Modal=({children, close})=>{
         document.addEventListener('keydown', closeModal);
         return () => document.removeEventListener('keydown', closeModal);
       })
+
+      useEffect(() => {
+        
+        document.body.style.overflow = 'hidden';
+        return () => {
+          
+          document.body.style.overflow = 'auto';
+        };
+      }, []);
+      
     return(
         createPortal(
         <div className={css.backdrop} onClick={closeModal}>

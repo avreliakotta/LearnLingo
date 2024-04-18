@@ -1,6 +1,7 @@
 import css from "./not-faund-page.module.css";
 import InfoBlock from "../../components/InfoBlock/InfoBlock";
-import defaultImg from "../../img/default_img.png"
+import defaultImg1x from "../../img/default_img.png";
+import defaultImg2x from "../../img/default@2x.png";
 
 const NotFaundPage=()=>{
   
@@ -13,7 +14,7 @@ const NotFaundPage=()=>{
                     <button type="button" className={css.heroBtn}>Get started</button>
                 </div>
                 <div className={css.imgThumb}>
-                <img src={defaultImg} alt="default" className={css.heroImg}/>
+                <img srcSet={`${defaultImg1x} 1x, ${defaultImg2x} 2x`} alt="default" className={css.heroImg} src={defaultImg1x}/>
                 </div>
 
             </section>

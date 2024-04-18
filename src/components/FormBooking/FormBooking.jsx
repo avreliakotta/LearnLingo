@@ -5,21 +5,19 @@ import RadioButton from '../RadioButton/RadioButton';
 import { radioOptions } from './radio-options';
 import { bookSchema } from '../../shemas/book-schema';
 import toast from 'react-hot-toast';
-
-import { getDatabase, ref, push } from 'firebase/database';
-import app from '../../firebase/firebase';
+import {useDispatch} from "react-redux";
+import { addBooking } from '../../redux/teachers/teachers-slice';
 
 const FormBooking = ({ teacherPhoto, name, id, closeModal }) => {
+  const dispatch=useDispatch();
+ 
   const initialValues = {
     course: '',
     email: '',
-
     phone: '',
     name: '',
   };
 
-  const database = getDatabase(app);
-  const bookingsRef = ref(database, 'bookings');
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
@@ -28,11 +26,10 @@ const FormBooking = ({ teacherPhoto, name, id, closeModal }) => {
         teacherId: id,
       };
 
-      await push(bookingsRef, bookingData);
+      await dispatch(addBooking( bookingData));
 
       setTimeout(() => {
         toast.success('Book successful!', { position: 'top-center' });
-        alert(JSON.stringify(values, null, 2));
         setSubmitting(false);
         resetForm();
         closeModal();

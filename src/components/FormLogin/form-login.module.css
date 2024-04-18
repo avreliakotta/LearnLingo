@@ -54,6 +54,10 @@ font-weight: 400;
 font-size: 1.6rem;
 line-height: 1.37;
 color: var(--main-color);
+transition: outline var(--transition-duration) var(--transition-time-function);
+}
+.authInput:focus{
+    outline: 0.1rem solid var(--decorate-color);
 }
 .authInput::placeholder{
     font-family: var(--font-family);

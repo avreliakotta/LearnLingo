@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router';
 import css from "./home-page.module.css";
 import image from "../../img/image.jpg";
+import img from "../../img/hero_imgk@2x.png";
 import InfoBlock from "../../components/InfoBlock/InfoBlock";
 const HomePage=()=>{
     const navigate=useNavigate();
@@ -17,7 +18,7 @@ const HomePage=()=>{
                     <button type="button" className={css.heroBtn} onClick={handlerClick}>Get started</button>
                 </div>
                 <div className={css.imgThumb}>
-                <img src={image} alt="girl with leptop" className={css.heroImg}/>
+                <img srcSet={`${image} 1x, ${img} 2x`} alt="girl with leptop" className={css.heroImg} src={image}/>
                 </div>
 
             </section>
