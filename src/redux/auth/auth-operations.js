@@ -46,9 +46,17 @@ export const login = createAsyncThunk(
         };
         return user;
       } catch (error) {
+        const errorMessage = error.message || 'Login failed. Please try again.';
+        if (error.code === 'auth/wrong-password') {
+          return rejectWithValue('Incorrect password. Please try again.');
+        } else {
+         
+          return rejectWithValue(errorMessage);
+        }
+      
     
-        const errorMessage = error.message;
-        return rejectWithValue(errorMessage);
+      
+      
       }
     }
   );
