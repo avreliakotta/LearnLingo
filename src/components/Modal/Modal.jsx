@@ -28,6 +28,7 @@ const Modal=({children, close})=>{
         createPortal(
         <div className={css.backdrop} onClick={closeModal}>
              <div className={css.modal} >
+             
         <button className={css.closeBtn} onClick={close}>
           <svg className={css.closeIcon}>
             <use href={`${sprite}#icon-close`}></use>
@@ -35,6 +36,7 @@ const Modal=({children, close})=>{
         </button>
         {children}
       </div>
+      
         </div>,
         
         modalRoot

@@ -43,7 +43,7 @@ const FormBooking = ({ teacherPhoto, name, id, closeModal }) => {
   };
 
   return (
-    <>
+    <div className={css.bookingContent}>
       <h2 className={css.bokingTitle}>Book trial lesson</h2>
       <p className={css.textBooking}>
         Our experienced tutor will assess your current language level, discuss
@@ -144,7 +144,7 @@ const FormBooking = ({ teacherPhoto, name, id, closeModal }) => {
           </Form>
         )}
       </Formik>
-    </>
+    </div>
   );
 };
 export default FormBooking;
