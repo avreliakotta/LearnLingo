@@ -24,21 +24,18 @@ const FormLogin = ({ closeModal }) => {
         if (loginError) {
           toast.error(loginError, { position: 'top-center' });
         } else {
-        
           toast.success('Login successful!', { position: 'top-center' });
           setSubmitting(false);
           resetForm();
           closeModal();
         }
-        
-     
       }, 1000);
     } catch (error) {
-      console.error('Login error:', error);
-      toast.error('Login failed. Please try again.', { position: 'top-center' });
+      toast.error('Login failed. Please try again.', {
+        position: 'top-center',
+      });
       setSubmitting(false);
     }
-    
   };
   return (
     <>
