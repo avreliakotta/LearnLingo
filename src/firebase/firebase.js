@@ -10,7 +10,8 @@ import { initializeApp } from 'firebase/app';
 //   appId: "1:335547383683:web:44df5719e29fce549400b6",
 //   measurementId: "G-73VRE4JXE3"
 // };
-
+console.log('API Key:', process.env.REACT_APP_FIREBASE_API_KEY);
+console.log('Auth Domain:', process.env.REACT_APP_FIREBASE_AUTH_DOMAIN);
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
@@ -22,8 +23,7 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 }
-console.log('API Key:', process.env.REACT_APP_FIREBASE_API_KEY);
-console.log('Auth Domain:', process.env.REACT_APP_FIREBASE_AUTH_DOMAIN);
+console.log('Firebase Config:', firebaseConfig);
 
 const app = initializeApp(firebaseConfig);
 
