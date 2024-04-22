@@ -1,20 +1,21 @@
 import { Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
+import css from "./app.module.css";
 import { Toaster } from 'react-hot-toast';
-import PrivateRoute from '../components/PrivateRoute';
+import PrivateRoute from '../PrivateRoute';
 
-const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
-const TeachersPage = lazy(() => import('../pages/TeachersPage/TeachersPage'));
+const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
+const TeachersPage = lazy(() => import('../../pages/TeachersPage/TeachersPage'));
 
-const NotFoundPage = lazy(() => import('../pages/NotFoundPage/NotFaundPage'));
-const Layout = lazy(() => import('../components/Layout/Layout'));
+const NotFoundPage = lazy(() => import('../../pages/NotFoundPage/NotFaundPage'));
+const Layout = lazy(() => import('../Layout/Layout'));
 
 export const App = () => {
   return (
     <>
       <Toaster />
 
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className={css.loadingText}>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
