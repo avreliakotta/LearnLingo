@@ -1,9 +1,11 @@
 import { Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectIsAuth} from '../redux/auth/auth-selectors';
-const PrivateRoute = ({ children }) => {
+import FavoritesPage from '../pages/FavoritesPage/FavoritesPage';
+const PrivateRoute = () => {
   const isLogin = useSelector(selectIsAuth);
+  console.log("isLogin",isLogin);
   
-  return isLogin ? children : <Navigate to="/"  />;
+  return isLogin ? <FavoritesPage/> : <Navigate to="/" replace  />;
 };
 export default PrivateRoute;

@@ -6,6 +6,7 @@ import { selectTeachers } from '../../redux/teachers/teachers-selectors';
 import CardList from '../../components/CardList/CardList';
 import Container from '../../components/Container/Container';
 
+
 const TeachersPage = () => {
   const [visibleTeachers, setVisibleTeachers] = useState(4);
   const dispatch = useDispatch();
@@ -27,16 +28,14 @@ const TeachersPage = () => {
 
   return (
     <main>
-      <section className={css.teachersSection}>
-        <Container backgroundColor="#eee">
-          <CardList data={data.slice(0, visibleTeachers)} />
-          {visibleTeachers < data.length && (
-            <button className={css.loadMoreBtn} onClick={loadMoreTeachers}>
-              Load more
-            </button>
-          )}
-        </Container>
-      </section>
+      <Container backgroundColor="#eee">
+        <CardList data={data.slice(0, visibleTeachers)} />
+        {visibleTeachers < data.length && (
+          <button className={css.loadMoreBtn} onClick={loadMoreTeachers}>
+            Load more
+          </button>
+        )}
+      </Container>
     </main>
   );
 };

@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import Container from '../Container/Container';
 import NotFoundHeader from '../NotFoundHeader/NotFoundHeader';
 
+
 const Layout = () => {
   const location = useLocation();
   const isNotFoundPage =

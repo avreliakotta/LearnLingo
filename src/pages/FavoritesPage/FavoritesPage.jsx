@@ -3,12 +3,13 @@ import css from './favorites-page.module.css';
 import Container from '../../components/Container/Container';
 import { selectFavorites } from '../../redux/teachers/teachers-selectors';
 import CardItem from '../../components/CardItem/CardItem';
+
 const FavoritesPage = () => {
   const favorites = useSelector(selectFavorites);
 
   return (
     <main>
-      <section className={css.favoritesSection}>
+      <section>
         <Container backgroundColor="#eee">
           {favorites && favorites.length > 0 ? (
             <ul className={css.fivoritesList}>
