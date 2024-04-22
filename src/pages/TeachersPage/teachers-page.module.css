@@ -17,4 +17,10 @@
   background-color: var(--accent-color);
 }
 
-
+.loaderText{
+  text-align: center;
+  color:var(--decorate-color);
+  font-family: var(--font-family);
+  font-size: 1.6rem;
+  line-height: 1.56;
+}
