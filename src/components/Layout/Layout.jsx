@@ -15,9 +15,11 @@ const Layout = () => {
 
   return (
     <Container>
+
       {isNotFoundPage ? <NotFoundHeader /> : <Header />}
 
       <Outlet />
+      
     </Container>
   );
 };

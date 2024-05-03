@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { fetchAll } from '../../redux/teachers/teachers-operations';
 import { selectTeachers } from '../../redux/teachers/teachers-selectors';
 import CardList from '../../components/CardList/CardList';
-import Container from '../../components/Container/Container';
+// import Container from '../../components/Container/Container';
 
 
 const TeachersPage = () => {
@@ -28,14 +28,14 @@ const TeachersPage = () => {
 
   return (
     <main>
-      <Container backgroundColor="#eee">
+      <section className={css.teachersSection} >
         <CardList data={data.slice(0, visibleTeachers)} />
         {visibleTeachers < data.length && (
           <button className={css.loadMoreBtn} onClick={loadMoreTeachers}>
             Load more
           </button>
         )}
-      </Container>
+      </section>
     </main>
   );
 };

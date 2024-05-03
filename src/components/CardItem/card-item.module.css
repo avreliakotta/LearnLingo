@@ -174,8 +174,9 @@
   .cardWrap {
     gap: 2rem;
     flex-direction: column;
-    max-width: 100%;
+    max-width: 90%;
     position: relative;
+    padding: 1.6rem;
   }
   .contentWrap {
     flex-direction: column;
@@ -200,7 +201,7 @@
 
 @media screen and (max-width: 767px) {
   .cardWrap {
-    max-width: 100%;
+    max-width: 90%;
     display: flex;
     flex-direction: column;
     position: relative;
